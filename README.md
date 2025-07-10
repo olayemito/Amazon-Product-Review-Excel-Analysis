@@ -50,5 +50,5 @@ Text Cards: Key KPIs
 Line Graphs: Trend identification
 
 ### Insights & Conclusions
-Download Full Analysis [here](
+Download Full Analysis [here](Amazon-case-Study-Solutions.xlsx)
 (Dashboard highlights actionable insights for pricing optimization, inventory planning, and category strategy)

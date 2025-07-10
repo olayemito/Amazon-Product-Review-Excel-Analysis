@@ -1,57 +1,54 @@
-# Amazon-Product-Review-Excel-Analysis
-Comprehensive Documentation of My Analysis for the DSA Amazon Product Review Capstone Project
+# Amazon Product Review Analysis - Excel Dashboard
+Comprehensive Exploratory Data Analysis for DSA Capstone Project
 
 ## Overview
-This repository presents an Exploratory Data Analysis (EDA) conducted on the [Amazon Product Rewiew] dataset using Microsoft Excel.
+This repository documents an Excel-based Exploratory Data Analysis (EDA) of Amazon product reviews, featuring a dynamic dashboard for actionable insights.
 
 ## EDA Steps
-1. [Data Import](#data-import)
-2. [Data Cleaning](#data-cleaning)
-3. [Descriptive Statistics](#descriptive-statistics)
-4. [Data Visualization](#data-visualization)
-5. [Insights and Conclusions](#insights-and-conclusions)
+1. Data Import
+2. Data Cleaning
+3. Descriptive Statistics
+4. Data Visualization
+5. Insights and Conclusions
 
 ### Data Import
-I launched Excel, imported the Amazon Study Case file and imported it into the excel workspace.
+Imported raw dataset ("Amazon Study Case") into Excel workspace
 
 ### Data Cleaning
-I created different sheets for each process of the analysis, from 'raw data' to 'dashboard'.
-- I created a new sheet called 'Data Cleaning Sheet' to perform the processes below:
-- I removed duplicated Product IDs by using the remove duplicate command to have unique products.
-- I separated the category column to have the main category from other sub categories of each products  using the 'text to column' command and use the delimiter '|' to make the split.
-- I removed blanks from the rating column using filter button.
-- Removed a product that did not have a rating content using the filter button as well as a product.
-- Created the "Total Product Revenue" column using theh Product Function (product of the actual price and the rating count).
-- I created the 'Discount Percentage Range' column from the discount percentage column using the functions below:
-          '=IF(K2<50%, "<50%", "50% or more")'
-- Created the discounted price column using the formula:
-          'actual price * (discountpercentage/100%)' 
-- I used the Proper function to correct the product names.
-- I Splited the review IDs using the text to columns and delimiter into individual IDs and used count to create another column to have the number of each products number of review IDs.
-- I created another sheet named 'Cleaned Data Set'
-- I ensured that all columns datatype were correctly aligned with the type of data they contain.
-Here, I moved all the cleaned dataset and created a table with them.
+(Executed in dedicated 'Data Cleaning Sheet')
+- Removed duplicate Product IDs
+- Split category column using | delimiter to isolate primary categories
+- Filtered out blank ratings and incomplete entries
+- 
+**Generated key metrics:**
+- Total Product Revenue: Actual Price × Rating Count
+- Discounted Price: Actual Price × (1 - Discount Percentage)
+- Discount Tier: Categorized discounts as <50% or ≥50%
+- Standardized product names with PROPER() function
+- Separated Review IDs and calculated review counts
+Finalized structured dataset in 'Cleaned Data Set' sheet
 
 ### Descriptive Statistics
-Here, I used the table from the cleaned dataset to make pivot tables based on the analysis tasks given on a new sheet titled 'Pivot Tables':
-I created the first pivot table to find the Average Discount % by Product Category by using the Product Category (Row bucket) and discount Percentage (Values bucket).
-Total Products listed in each Category with product Category (Row bucket) and Count of Product ID (values bucket).
-Total number of reviews per category and categories with highest ratings with Product Category (Row bucket) and Sum of rating count (values bucket).
-Average Price vs Discounted Price by Category with product category (row bucket) and average of actual and discounted prices (values bucket).
-Products with the Highest number of Reviews with Product Name (row bucket) and Sum of rating_count (values bucket); top 10 products.
-Products that have a discount of 50% or more with Product ID (row bucket) and count of product ID (values bucket) with filters on selecting 50% or more.
-Distribution of product ratings with rating (row bucket) and count of product name (values bucket).
-Total Potential Revenue by Category with product category (row bucket) and sum of Total Potential Revenue (values bucket).
-Number of Unique Products per Price Range Bucket with Discount Price Range Bucket (row bucket) and Count of product ID (values bucket).
-Rating related to the level of discount with Discount percentage (row bucket) and Average of rating (values bucket).
-Products with fewer than 1,000 Reviews with product ID (row bucket) and Sum of rating count (values bucket), used filter option 'Less than or equal to' to set the sum count to 1,000 reviews and less then used the count function to count the total number of products with less tha 1,000 reviews.
-Products Category with the Highest Discounts with Product Category (row bucket) and maximum of discount percentage (values bucket).
-Top 5 Products by Rating and Number of Reviews Combined with Product name (row bucket) and sum of combined Score (values bucket). I created a calculated column to calculated the combined score with the formula:
-                              'Combined Score= (Average Rating * Sum of Reviews)'
+(Pivot Tables in dedicated sheet)
 
-### Data Visualisation
-Here, I created a new sheet to create my Excel Dashboard from the pivot tables I create from the previous sheet. I create appropriate charts and cards based on each pivot table already created. I used Piecharts, Donutchart, line graphs, clustered columns, textboxes as cards and clustered bars to visualise each table appropriately.
+|Analysis Focus | Key Metrics | Fields Used|
+----------------|-------------|------------|
+|Category Performance | Avg. Discount %, Product Count| Category × Discount %|
+|Review Analysis | Total Reviews, Top-Rated Categories | Category × Rating Count|
+|Pricing Strategy | Avg. Actual vs. Discounted Price | Category × Price Metrics|
+|High-Impact Products | Top 10 by Reviews, Top 5 by Combined Score| Product × Rating Count|
+|Discount Dynamics | Products with ≥50% discount, Max Discount by Category | Discount Tier × Product Count|
+|Revenue Forecasting | Total Potential Revenue by Category | Category × Revenue|
+|Rating Distribution | Score frequency | Rating × Product Count|
 
-### Insights and Conclusions
-You can download the analysis file named Amazon Case Study Solutions [here](
+### Data Visualization
+Built interactive dashboard with:
+Pie/Donut Charts: Category distribution
+Clustered Columns: Pricing analysis
+Bar Graphs: Review performance
+Text Cards: Key KPIs
+Line Graphs: Trend identification
 
+### Insights & Conclusions
+Download Full Analysis [here](
+(Dashboard highlights actionable insights for pricing optimization, inventory planning, and category strategy)

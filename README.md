@@ -19,7 +19,7 @@ Imported raw dataset ("Amazon Study Case") into Excel workspace
 - Removed duplicate Product IDs
 - Split category column using | delimiter to isolate primary categories
 - Filtered out blank ratings and incomplete entries
-- 
+  
 **Generated key metrics:**
 - Total Product Revenue: Actual Price × Rating Count
 - Discounted Price: Actual Price × (1 - Discount Percentage)

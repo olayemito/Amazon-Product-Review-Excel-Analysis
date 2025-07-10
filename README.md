@@ -53,5 +53,5 @@ Top 5 Products by Rating and Number of Reviews Combined with Product name (row b
 Here, I created a new sheet to create my Excel Dashboard from the pivot tables I create from the previous sheet. I create appropriate charts and cards based on each pivot table already created. I used Piecharts, Donutchart, line graphs, clustered columns, textboxes as cards and clustered bars to visualise each table appropriately.
 
 ### Insights and Conclusions
-
+You can download the analysis file named Amazon Case Study Solutions [here](
 

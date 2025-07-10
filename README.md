@@ -5,11 +5,11 @@ Comprehensive Exploratory Data Analysis for DSA Capstone Project
 This repository documents an Excel-based Exploratory Data Analysis (EDA) of Amazon product reviews, featuring a dynamic dashboard for actionable insights.
 
 ## EDA Steps
-1. Data Import
-2. Data Cleaning
-3. Descriptive Statistics
-4. Data Visualization
-5. Insights and Conclusions
+1. [Data Import](#data-import)
+2. [Data Cleaning](#data-cleaning)
+3. [Descriptive Statistics](#descriptive-statistics)
+4. [Data Visualization](#data-visualization)
+5. [Insights and Conclusions](#insights-and-conclusions)
 
 ### Data Import
 Imported raw dataset ("Amazon Study Case") into Excel workspace
